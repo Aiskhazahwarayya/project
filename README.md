@@ -39,7 +39,7 @@ UserListPage :
 
 
 ApikeyPage :
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/2cc6bc3b-fe7f-4697-b42a-659b61fffda5" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/61615461-90e5-4d4b-8a72-9a224d3336d0" />
 
 <img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/d89a09c4-5fbd-492c-9294-4e04ea7fa0f0" />
 
@@ -80,46 +80,6 @@ Dashboard Admin :
 <img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/71fde39f-1936-41a1-9460-fb78b741bfe2" />
 
 
-Postman :
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/5ed33953-483d-4a9b-8e3c-9cfec7a6cf3f" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/16983c65-501b-4998-bb91-fe732cb9f087" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/8dc51193-1237-489d-8b47-c7ec19f7df8a" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/5d68f4b6-a625-4ba1-ab4b-29fdd7ceff6b" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/d64c3818-ffe1-4caa-bdd3-b21335f057a3" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/a2154388-a5ad-47ed-ae0f-382c24fe1571" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/f600abef-81de-474c-9ac9-980682869b1b" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/180e1450-b4cc-48e8-8e48-b6782f16348c" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/fca2227e-b6fa-4c59-b672-354d3e74c2ec" />
-
-<img width="2880" height="1800" alt="Screenshot 2026-01-10 154350" src="https://github.com/user-attachments/assets/b03e67d4-35b2-45d8-897f-08fd66721a44" />
-
-<img width="2880" height="1800" alt="Screenshot 2026-01-10 154735" src="https://github.com/user-attachments/assets/ade4b535-b451-45d9-b7ba-887ff7008025" />
-
-<img width="2880" height="1800" alt="Screenshot 2026-01-10 154838" src="https://github.com/user-attachments/assets/bb5a011b-73f9-4e5c-a1a8-333b36e17fbd" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/abf5147b-9a14-4580-9350-5520331662bc" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/2ad0de8e-e639-4cc2-8ad9-14a1420cb74d" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/cdefb861-7f2e-4d41-8246-630084e10e49" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/11ab0c8d-da1e-4dec-bc91-e0bf2b5cc02d" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/48371462-975e-4e64-8e63-87050ac23e30" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/f51db0cf-7b52-4307-993c-1d201c40ab82" />
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/cf8a0f4e-d637-44d2-a379-2f45bb20125c" />
-
-
 Database :
 <img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/651048f4-f3d9-47e4-b4ce-73cf7d343f95" />
 
@@ -127,7 +87,7 @@ Database :
 
 <img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/e9291292-bc6e-44ec-9af4-1f4679d5f820" />
 
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/4fbca8a2-c768-4be8-878f-bedfc7844a1d" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/1be8628a-1ff4-41d7-aa50-0013f5b3412d" />
 
 
 
