@@ -69,6 +69,9 @@ Dashboard User :
 
 <img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/16651f0d-761f-4be3-80ec-68df0ccbfd43" />
 
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/ed336d29-2b0a-449b-900f-e803f0c3fff1" />
+
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/d8696982-1e4a-4684-8c2f-00db0b78baff" />
 
 <img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/842660e4-da8f-4d61-88e8-db06fb49a72c" />
 
@@ -120,11 +123,11 @@ Postman :
 Database :
 <img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/651048f4-f3d9-47e4-b4ce-73cf7d343f95" />
 
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/f10529bc-41c4-48ac-8b10-d2470d933a82" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/36976202-84ae-4789-b6ac-f5edd71d1d0c" />
 
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/28ecbb48-896d-4aaa-8b7c-53a8133659d2" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/e9291292-bc6e-44ec-9af4-1f4679d5f820" />
 
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/9f174316-a455-424a-9530-385d3534dfda" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/4fbca8a2-c768-4be8-878f-bedfc7844a1d" />
 
 
 
