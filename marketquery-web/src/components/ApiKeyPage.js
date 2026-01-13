@@ -6,6 +6,7 @@ const ApiKeyPage = () => {
   const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
   const [showKey, setShowKey] = useState(false);
+  const [expiresAt, setExpiresAt] = useState(null);
 
   useEffect(() => {
     fetchApiKey();
@@ -20,6 +21,7 @@ const ApiKeyPage = () => {
       const data = await res.json();
       if (data.success && data.data.api_key) {
         setApiKey(data.data.api_key);
+        setExpiresAt(data.data.expires_at);
       }
     } catch (err) {
       console.error("Gagal mengambil API Key:", err);
@@ -43,6 +45,7 @@ const ApiKeyPage = () => {
 
       if (data.success && data.api_key) {
         setApiKey(data.api_key);
+        setExpiresAt(data.expires_at);
         alert("API Key berhasil diperbarui!");
       } else {
         alert("Gagal membuat API Key: " + (data.message || "Unknown error"));
@@ -126,7 +129,17 @@ const ApiKeyPage = () => {
                   </div>
                   <div>
                     <h2 className="text-white text-xl font-black">API Key Anda</h2>
-                    <p className="text-white/70 text-sm">Rahasiakan kunci ini!</p>
+                    {expiresAt ? (
+                      <p className="text-green-300 text-xs font-medium bg-green-500/20 px-2 py-0.5 rounded-md inline-block mt-1">
+                        Berlaku hingga: {new Date(expiresAt).toLocaleDateString('id-ID', { 
+                          day: 'numeric', 
+                          month: 'long', 
+                          year: 'numeric' 
+                        })}
+                      </p>
+                    ) : (
+                      <p className="text-white/70 text-sm">Rahasiakan kunci ini!</p>
+                    )}
                   </div>
                 </div>
                 
@@ -227,7 +240,7 @@ const ApiKeyPage = () => {
                 <pre className="text-sm text-gray-300 font-mono">
                   <code>
                     <span className="text-gray-500">// Header Request</span>{'\n'}
-                    <span className="text-blue-400">x-api-key</span>: <span className="text-yellow-300">{apiKey || 'sk-or-v1-xxxxxxxxxxxxxxxxxxxx'}</span>
+                    <span className="text-blue-400">x-api-key</span>: <span className="text-yellow-300">{apiKey || 'wm_live_xxxxxxxxxxxxxxxxxxxx'}</span>
                   </code>
                 </pre>
               </div>

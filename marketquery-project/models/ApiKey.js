@@ -27,6 +27,14 @@ module.exports = (sequelize, DataTypes) => {
     status: {
       type: DataTypes.ENUM('active', 'inactive'),
       defaultValue: 'active'
+    },
+    last_used: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    expires_at: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     sequelize,

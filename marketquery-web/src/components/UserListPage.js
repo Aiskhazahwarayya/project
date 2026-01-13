@@ -29,13 +29,16 @@ const UserManagementPage = () => {
         
         const total = data.data.length;
         const withKeys = data.data.filter(u => u.api_key).length;
-        const activeKeysCount = data.data.filter(u => u.api_key).length;
+        
+        // PERBAIKAN: Hitung berdasarkan kolom status yang dikirim Backend
+        const activeKeysCount = data.data.filter(u => u.api_key && u.status === 'active').length;
+        const inactiveKeysCount = data.data.filter(u => u.api_key && u.status === 'inactive').length;
         
         setStats({
           totalUsers: total,
           totalApiKeys: withKeys,
           activeKeys: activeKeysCount,
-          inactiveKeys: 0
+          inactiveKeys: inactiveKeysCount
         });
       }
     } catch (error) {
@@ -268,12 +271,19 @@ const UserManagementPage = () => {
                     <div className="md:col-span-1 flex md:justify-center items-center gap-2">
                       <span className="md:hidden text-gray-400 text-xs font-semibold">Status:</span>
                       {user.api_key ? (
-                        <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 border border-green-500/30 rounded-lg text-xs font-bold">
-                          Aktif
-                        </span>
+                        // PERBAIKAN: Membaca status asli dari database (active/inactive)
+                        user.status === 'active' ? (
+                          <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 border border-green-500/30 rounded-lg text-xs font-bold">
+                            Aktif
+                          </span>
+                        ) : (
+                          <span className="inline-block px-3 py-1 bg-red-500/20 text-red-300 border border-red-500/30 rounded-lg text-xs font-bold">
+                            Inactive
+                          </span>
+                        )
                       ) : (
                         <span className="inline-block px-3 py-1 bg-gray-500/20 text-gray-300 border border-gray-500/30 rounded-lg text-xs font-bold">
-                          Inactive
+                          No Key
                         </span>
                       )}
                     </div>

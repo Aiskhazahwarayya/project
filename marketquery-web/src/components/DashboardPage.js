@@ -233,7 +233,7 @@ const UserAPIExplorer = ({ apiKey, onLoadSuccess }) => {
                 />
               </div>
             </div>
-              <div>
+            <div>
               <div className="relative">
                 <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-pink-300 z-10 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
@@ -627,7 +627,6 @@ const DashboardPage = () => {
   const [products, setProducts] = useState([]);
   const [stats, setStats] = useState({ totalProducts: 0, totalUsers: 0, totalApiKeys: 0 });
   const [loading, setLoading] = useState(true);
-  const [apiLogs, setApiLogs] = useState([]);
   const [totalRequests, setTotalRequests] = useState(0);
   const [activeKeys, setActiveKeys] = useState(0);
   const [generatingKey, setGeneratingKey] = useState(false);
@@ -662,20 +661,22 @@ const DashboardPage = () => {
 
         if (statsData.success && statsData.data) {
           setTotalRequests(statsData.data.totalRequests || 0);
-          setApiLogs(statsData.data.recentLogs || []);
         }
-      }
 
-      if (currentUser.role === 'user') {
         const profileRes = await fetch('http://localhost:3009/api/auth/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
         const profileData = await profileRes.json();
-        if (profileData.success && profileData.data.api_key) {
-          setApiKey(profileData.data.api_key);
-          setActiveKeys(1);
-        } else {
-          setActiveKeys(0);
+        if (profileData.success && profileData.data) {
+          if (profileData.data.api_key) {
+            setApiKey(profileData.data.api_key);
+            setActiveKeys(1);
+          } else {
+            setActiveKeys(0);
+          }
+          if (profileData.data.status) {
+            setUser(prev => ({ ...prev, status: profileData.data.status }));
+          }
         }
       }
 
@@ -810,7 +811,15 @@ const DashboardPage = () => {
       const data = await res.json();
 
       if (data.success && data.api_key) {
+        // 1. Update API Key
         setApiKey(data.api_key);
+        
+        // 2. Update Status User jadi 'active' biar badge berubah
+        setUser(prev => ({ ...prev, status: 'active' }));
+        
+        // 3. Update jumlah key aktif jadi 1
+        setActiveKeys(1);
+
         alert('API Key berhasil diperbarui!');
       } else {
         alert('Gagal membuat API Key');
@@ -825,17 +834,6 @@ const DashboardPage = () => {
 
   const handleLoadSuccess = () => {
     setTotalRequests(prev => prev + 1);
-  };
-
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleString('id-ID', { 
-      day: '2-digit', 
-      month: 'short', 
-      hour: '2-digit', 
-      minute: '2-digit',
-      hour12: true 
-    });
   };
 
   if (loading || !user) {
@@ -1003,8 +1001,14 @@ const DashboardPage = () => {
                     <div className="flex justify-between items-center py-3">
                       <span className="text-white/80 text-sm">Account Status</span>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        <span className="text-lg font-black text-green-400">ACTIVE</span>
+                        <div className={`w-2 h-2 rounded-full animate-pulse ${
+                          user.status === 'active' ? 'bg-green-400' : 'bg-red-400'
+                        }`}></div>
+                        <span className={`text-lg font-black ${
+                          user.status === 'active' ? 'text-green-400' : 'text-red-400'
+                        }`}>
+                          {user.status === 'active' ? 'ACTIVE' : 'INACTIVE'}
+                        </span>
                       </div>
                     </div>
                   </div>
